@@ -26,7 +26,8 @@
     --sec: clamp(72px, 12vh, 136px);
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  a, button, [data-fig] { -webkit-tap-highlight-color: transparent; }
   html, body { margin: 0; background: #fff; color: var(--ink); overflow-x: clip; }
   body { font: 16px/1.62 "Geist", system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
   a { color: inherit; }
@@ -160,11 +161,16 @@
   }
 
   @media (max-width: 880px) {
+    :root { --sec: 64px; }
+    .copy p, .lede { text-align: left; hyphens: manual; }
     .l, .r { grid-column: 1 / -1; }
     .hero { min-height: 0; padding-top: 0; }
-    .hero .fig { order: -1; margin: -8% -6% 0; }
-    .hint { bottom: 0; }
-    .sec .fig { margin: 8px -6% -4%; }
+    .hero .fig { order: -1; margin: 0 -6%; }
+    .hero .inst { top: 5%; }
+    .hint { bottom: 1%; }
+    .hero .l { padding-top: 20px; }
+    .sec .fig { margin: 0 -6% -2%; }
+    #design .fig { margin-top: -16%; margin-bottom: -6%; }
     .sec.flipm .fig { order: -1; }
     .stick { position: static; }
     .sec .r.list { margin-top: 32px; }
@@ -178,8 +184,16 @@
     .fact:nth-child(n + 3) { border-top: 1px solid var(--line); }
     nav .hide { display: none; }
   }
+  @media (min-width: 561px) and (max-width: 880px) {
+    .hero .fig, .sec .fig { width: 100%; max-width: 540px; justify-self: center; margin-inline: 0; }
+  }
+  @media (pointer: coarse) {
+    nav a, .who { padding-block: 12px; margin-block: -12px; }
+    .lnk { padding-block: 13px; margin-block: -13px; }
+    .more { padding-top: 12px; margin-top: 12px; }
+    .work b a { padding-block: 8px; }
+  }
   @media (max-width: 560px) {
-    .copy p, .lede { text-align: left; hyphens: manual; }
     .r.work > li { grid-template-columns: minmax(0, 1fr); row-gap: 4px; }
     .r.work > li > :last-child { grid-column: 1; }
     .rows li { flex-direction: column; gap: 2px; }
@@ -302,12 +316,13 @@
 (function () {
   var root = document.documentElement;
   var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var touch = window.matchMedia && matchMedia("(hover: none)").matches;
 
   // What each figure's read-out says, in the corner of its stage.
   var SAY = {
     drone: function (t) { return t === "rest" ? "hovering" : t === "hold" ? "holding" : "flying " + t; },
-    laptop: function (t) { return t === "rest" ? "type on the keys" : "key " + t; },
-    proofs: function (t) { return t === "rest" ? "pick up a proof" : t; }
+    laptop: function (t) { return t === "rest" ? (touch ? "tap the keys" : "type on the keys") : "key " + t; },
+    proofs: function (t) { return t === "rest" ? (touch ? "tap a proof" : "pick up a proof") : t; }
   };
   var injected = false;
   // A small host for several Hairline figures: each mounts on the stage that names it.
@@ -334,6 +349,7 @@
       }
     };
     figure.mount({ stage: stage, svg: svg, read: read }, figure.range[1]);
+    if (inst) inst.textContent = SAY[figure.name](text);
   };
 
   // The hero arrives once the type is ready, so nothing jumps.
