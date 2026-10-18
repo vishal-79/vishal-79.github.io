@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vishal M · Aerospace engineer, co-founder of Crest Intelligence</title>
+<meta name="description" content="Aerospace engineer and co-founder of Crest Intelligence. Builder of HataD, land checks for Tamil Nadu.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://vishal-79.github.io/">
+<link rel="icon" href="assets/avatar.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vishal-79.github.io/">
+<meta property="og:title" content="Vishal M">
+<meta property="og:description" content="Aerospace engineer and co-founder of Crest Intelligence. Builder of HataD, land checks for Tamil Nadu.">
+<meta property="og:image" content="https://vishal-79.github.io/assets/avatar.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #232327; --mute: #6b6b74; --faint: #a4a4ac; --line: #ececee; --wash: #f7f7f8;
+    --ease: cubic-bezier(.32, .72, 0, 1); --spring: cubic-bezier(.34, 1.4, .64, 1);
+    --pad: clamp(16px, 4vw, 40px); --gap: clamp(16px, 2.6vw, 32px); --max: 1180px;
+    --sec: clamp(72px, 12vh, 136px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  html, body { margin: 0; background: #fff; color: var(--ink); overflow-x: clip; }
+  body { font: 16px/1.62 "Geist", system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  a { color: inherit; }
+  :focus-visible { outline: 1.5px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: #e8e8ec; }
+
+  /* one grid for the whole page: words on the left (1–5), figures and lists on the right (6–12) */
+  .wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--pad); }
+  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+  .l { grid-column: 1 / span 5; }
+  .r { grid-column: 6 / span 7; }
+  /* dividers run edge to edge of the content, not into the margins */
+  .rule { background: linear-gradient(var(--line), var(--line)) no-repeat center top / calc(100% - var(--pad) * 2) 1px; }
+  .sec { padding-block: var(--sec); align-items: center; }
+  .sec.top { align-items: start; }
+  .stick { position: sticky; top: 104px; }
+
+  .eyebrow { display: block; font: 12.5px/1 "Geist Mono", monospace; color: var(--faint); letter-spacing: .01em; }
+  h1 { margin: 0; font-size: clamp(2.8rem, 6.2vw, 4.8rem); line-height: .98; font-weight: 600; letter-spacing: -.047em; }
+  h2 { margin: 16px 0 0; font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.08; font-weight: 600; letter-spacing: -.035em; text-wrap: balance; }
+  .copy p, .lede { margin: 20px 0 0; color: var(--mute); max-width: 46ch; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 9 4 4; }
+  .copy p b, .lede b { color: var(--ink); font-weight: 500; }
+  .lede { margin-top: 26px; max-width: 38ch; font-size: clamp(1.08rem, 1.6vw, 1.26rem); line-height: 1.55; letter-spacing: -.012em; }
+
+  .rows { margin: 28px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); max-width: 46ch; }
+  .rows li { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .rows li span:first-child { color: var(--faint); font: 13px/1.6 "Geist Mono", monospace; white-space: nowrap; }
+  .rows li span:last-child { text-align: right; }
+  .more { display: inline-flex; align-items: center; gap: 6px; margin-top: 24px; font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 3px; transition: border-color .2s; }
+  .more i { font-style: normal; transition: transform .3s var(--ease); }
+  .more:hover { border-color: var(--ink); }
+  .more:hover i, .lnk:hover i { transform: translate(2px, -2px); }
+
+  /* header */
+  header { position: sticky; top: 0; z-index: 20; background: rgba(255, 255, 255, .84); backdrop-filter: blur(14px) saturate(160%); -webkit-backdrop-filter: blur(14px) saturate(160%); box-shadow: 0 1px 0 transparent; transition: box-shadow .3s; }
+  header.scrolled { box-shadow: 0 1px 0 var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+  .who { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
+  .who img { width: 26px; height: 26px; border-radius: 7px; display: block; transition: transform .5s var(--spring); }
+  .who:hover img { transform: rotate(-8deg); }
+  nav { display: flex; gap: clamp(14px, 2.4vw, 28px); align-items: center; font-size: 14px; }
+  nav a { text-decoration: none; color: var(--mute); transition: color .15s; }
+  nav a:hover, nav a.on { color: var(--ink); }
+  nav .clock { font: 12.5px/1 "Geist Mono", monospace; color: var(--faint); font-variant-numeric: tabular-nums; }
+
+  /* figures and their instrument read-outs */
+  .fig { position: relative; }
+  .fig [data-fig] { width: 100%; }
+  .inst { position: absolute; right: 6%; top: 6%; z-index: 1; font: 12px/1 "Geist Mono", monospace; color: var(--mute); font-variant-numeric: tabular-nums; transition: opacity .16s, color .3s; }
+  .inst.live { color: var(--ink); }
+  .inst.swap { opacity: 0; }
+  .hint { position: absolute; left: 0; right: 0; bottom: 4%; text-align: center; font: 12px/1 "Geist Mono", monospace; color: var(--faint); }
+  .touch { display: none; }
+  @media (hover: none) { .touch { display: inline; } .mouse { display: none; } }
+
+  /* hero */
+  .hero { min-height: min(86vh, 780px); align-items: center; padding-block: clamp(8px, 3vh, 40px); }
+  .hero .fig { margin: -4% -6% -4% -2%; }
+  .hero [data-fig] { cursor: crosshair; }
+  .word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+  .word > span { display: inline-block; }
+  .cta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 22px; margin-top: 36px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 12px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 500; font-size: 15px; transition: transform .25s var(--ease), box-shadow .25s; }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -10px rgba(35, 35, 39, .55); }
+  .btn:active { transform: scale(.97); }
+  .lnk { display: inline-flex; gap: 5px; font-size: 15px; color: var(--mute); text-decoration: none; transition: color .15s; }
+  .lnk i { font-style: normal; transition: transform .3s var(--ease); }
+  .lnk:hover { color: var(--ink); }
+
+  /* the numbers */
+
+  .fact { grid-column: span 3; padding: 30px 0 32px; }
+  .fact + .fact { box-shadow: -1px 0 0 var(--line); padding-left: var(--gap); margin-left: calc(var(--gap) * -1); }
+  .fact b { display: block; font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 600; letter-spacing: -.035em; line-height: 1.05; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .fact b small { font-size: .5em; font-weight: 500; color: var(--faint); letter-spacing: 0; margin-left: 4px; }
+  .fact span { display: block; margin-top: 8px; font-size: 14px; color: var(--mute); line-height: 1.45; max-width: 26ch; }
+
+  /* work */
+  .work { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  /* lists on the right share the page grid: labels on its first two columns, text from the third */
+  .r.list { display: grid; grid-template-columns: subgrid; align-content: start; }
+  .r.list > li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; }
+  .r.list > li > :first-child { grid-column: 1 / span 2; }
+  .r.list > li > :last-child { grid-column: 3 / -1; }
+  .r.list.links > li > a { grid-column: 1 / -1; }
+  .work li { padding: 18px 0; border-bottom: 1px solid var(--line); transition: background .2s; }
+  .work li:hover { background: linear-gradient(90deg, transparent, var(--wash) 12%, var(--wash) 88%, transparent); }
+  .work .catch { font: 13px/1.55 "Geist Mono", monospace; color: var(--faint); padding-top: 2px; }
+  .work b { font-weight: 500; }
+  .work b a { text-decoration: none; border-bottom: 1px solid var(--line); }
+  .work b a:hover { border-color: var(--ink); }
+  .work p { margin: 4px 0 0; color: var(--mute); font-size: 15px; line-height: 1.5; }
+  .work em { display: block; margin-top: 6px; font-style: normal; font-size: 13.5px; color: var(--ink); }
+
+  /* path */
+  .path { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  .path li { padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .path time { font: 13px/1.6 "Geist Mono", monospace; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .path span { color: var(--mute); }
+  .path li.key span { color: var(--ink); font-weight: 500; }
+  .path .now time { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+  .path .now time::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 0 rgba(22, 163, 74, .45); animation: pulse 2s var(--ease) infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 7px rgba(22, 163, 74, 0); } 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); } }
+
+  /* contact */
+  .contact h2 { font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1; letter-spacing: -.045em; margin-top: 16px; }
+  .links { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  .links a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 20px 0; text-decoration: none; border-bottom: 1px solid var(--line); }
+  .links a b { font-weight: 500; font-size: 1.15rem; letter-spacing: -.01em; }
+  .links a span { font: 13px/1 "Geist Mono", monospace; color: var(--faint); display: inline-flex; gap: 6px; transition: color .2s; }
+  .links a span i { font-style: normal; transition: transform .3s var(--ease); }
+  .links a:hover span { color: var(--ink); }
+  .links a:hover span i { transform: translate(2px, -2px); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-block: 28px 44px; font: 12.5px/1.6 "Geist Mono", monospace; color: var(--faint); }
+
+  /* motion: the hero arrives once; everything else settles in as it scrolls into view */
+  .js .word > span { transform: translateY(105%); }
+  .js .rise { opacity: 0; transform: translateY(12px); }
+  .js .land { opacity: 0; transform: translateY(-28px); }
+  .ready .word > span { transform: none; transition: transform 1s var(--ease); transition-delay: calc(var(--i) * 70ms + 80ms); }
+  .ready .rise { opacity: 1; transform: none; transition: opacity .9s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0ms); }
+  .ready .land { opacity: 1; transform: none; transition: opacity 1.2s var(--ease), transform 1.6s var(--ease); transition-delay: 180ms; }
+  .js [data-in] > * { opacity: 0; transform: translateY(14px); }
+  .js [data-in].in > * { opacity: 1; transform: none; transition: opacity .8s var(--ease), transform .95s var(--ease); transition-delay: calc(var(--n, 0) * 70ms); }
+  .js .figin { opacity: 0; transform: scale(.985); }
+  .js .figin.in { opacity: 1; transform: none; transition: opacity 1s var(--ease), transform 1.2s var(--ease); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .word > span, .js .rise, .js .land, .js [data-in] > *, .js .figin { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .path .now time::before { animation: none; }
+  }
+
+  @media (max-width: 880px) {
+    .l, .r { grid-column: 1 / -1; }
+    .hero { min-height: 0; padding-top: 0; }
+    .hero .fig { order: -1; margin: -8% -6% 0; }
+    .hint { bottom: 0; }
+    .sec .fig { margin: 8px -6% -4%; }
+    .sec.flipm .fig { order: -1; }
+    .stick { position: static; }
+    .sec .r.list { margin-top: 32px; }
+    .r.list > li { grid-template-columns: 96px minmax(0, 1fr); column-gap: 16px; }
+    .r.list > li > :first-child { grid-column: 1; }
+    .r.list > li > :last-child { grid-column: 2; }
+    .r.links > li { grid-template-columns: minmax(0, 1fr); }
+    .r.list.links > li > a { grid-column: 1; }
+    .fact { grid-column: span 6; }
+    .fact:nth-child(3) { box-shadow: none; padding-left: 0; margin-left: 0; }
+    .fact:nth-child(n + 3) { border-top: 1px solid var(--line); }
+    nav .hide { display: none; }
+  }
+  @media (max-width: 560px) {
+    .copy p, .lede { text-align: left; hyphens: manual; }
+    .r.work > li { grid-template-columns: minmax(0, 1fr); row-gap: 4px; }
+    .r.work > li > :last-child { grid-column: 1; }
+    .rows li { flex-direction: column; gap: 2px; }
+    .rows li span:last-child { text-align: left; }
+  }
+</style>
+</head>
+<body>
+  <header id="head"><div class="wrap">
+    <a class="who" href="#top"><img src="assets/avatar.jpg" alt="">Vishal M</a>
+    <nav><a class="hide" href="#building">Building</a><a class="hide" href="#design">Design</a><a class="hide" href="#work">Work</a><a class="hide" href="#path">Path</a><a href="#contact">Contact</a><span class="clock hide" id="clock">Coimbatore</span></nav>
+  </div></header>
+
+  <main id="top">
+    <section class="wrap grid hero">
+      <div class="l">
+        <h1 aria-label="Hi, I'm Vishal."><span class="word" style="--i:0"><span>Hi,</span></span> <span class="word" style="--i:1"><span>I'm</span></span> <span class="word" style="--i:2"><span>Vishal.</span></span></h1>
+        <p class="lede rise" style="--d:320ms"><b>Aerospace engineer and co-founder of Crest Intelligence.</b> Trained to find the failure point first, I now build HataD: it finds what's wrong with a piece of land in Tamil Nadu before anyone pays for it.</p>
+        <div class="cta rise" style="--d:440ms"><a class="btn" href="#contact">Get in touch</a><a class="lnk" href="https://www.linkedin.com/in/vishalm79">LinkedIn <i>↗</i></a><a class="lnk" href="https://github.com/vishal-79">GitHub <i>↗</i></a></div>
+      </div>
+      <div class="r fig land"><span class="inst" data-inst="drone">hovering</span><div data-fig="drone"></div><span class="hint"><span class="mouse">move your cursor · the drone follows</span><span class="touch">tap anywhere · the drone follows</span></span></div>
+    </section>
+
+    <section class="wrap grid facts rule" data-in>
+      <div class="fact"><b data-count="6000">6,000<small>→ 1</small></b><span>National winner, NexGen Hackathon 2025.</span></div>
+      <div class="fact"><b data-count="30">30<small>→ 1</small></b><span>Government departments and courts, read for one HataD report.</span></div>
+      <div class="fact"><b data-count="38">38</b><span>Districts of Tamil Nadu where HataD is live.</span></div>
+      <div class="fact"><b data-count="3">3<small>days</small></b><span>From a survey number to a clearance report.</span></div>
+    </section>
+
+    <section class="wrap grid rule sec flipm" id="building">
+      <div class="l copy" data-in>
+        <span class="eyebrow">Building</span>
+        <h2>I build things that work.</h2>
+        <p>I co-founded <b>Crest Intelligence</b> with Vikashini S and Adhvik Vithun T. Our product, <b>HataD</b>, reads 30 government departments and courts for a single parcel of land and returns one report, so a buyer knows what's wrong before they pay.</p>
+        <ul class="rows">
+          <li><span>live in</span><span>All 38 districts of Tamil Nadu</span></li>
+          <li><span>mapped</span><span>614 sub-registrar offices, 24,729 villages</span></li>
+          <li><span>turnaround</span><span>Three days</span></li>
+          <li><span>backed by</span><span>NVIDIA Inception, AWS Activate</span></li>
+        </ul>
+        <a class="more" href="https://hatad.in">Visit hatad.in <i>↗</i></a>
+      </div>
+      <div class="r fig figin"><span class="inst" data-inst="laptop">type on the keys</span><div data-fig="laptop"></div></div>
+    </section>
+
+    <section class="wrap grid rule sec flipm" id="design">
+      <div class="l copy" data-in>
+        <span class="eyebrow">Design</span>
+        <h2>I design what I ship.</h2>
+        <p>I designed <b>hatad.in</b> and <b>crestintelligence.in</b> myself. At <b>Gravitace</b>, the aerospace students' association, I led posters, video and visual storytelling, and started the media team's first identity overhaul, later adopted across the organisation.</p>
+        <ul class="rows">
+          <li><span>company sites</span><span>hatad.in, crestintelligence.in</span></li>
+          <li><span>gravitace</span><span>Art Director, then Media Coordinator, 2023–25</span></li>
+          <li><span>nss, karunya</span><span>Design head, 2024–25</span></li>
+        </ul>
+      </div>
+      <div class="r fig figin"><span class="inst" data-inst="proofs">pick up a proof</span><div data-fig="proofs"></div></div>
+    </section>
+
+    <section class="wrap grid rule sec top" id="work">
+      <div class="l copy stick" data-in>
+        <span class="eyebrow">Work</span>
+        <h2>Everything else I've built.</h2>
+        <p>Sorted by what each one catches. The habit is the same every time: find the failure before it costs someone.</p>
+      </div>
+      <ol class="r work list" data-in>
+        <li><span class="catch">a deepfake face</span><div><b>DeepSight AI</b><p>An EfficientNet-B3 model, 98.6% accurate, with Grad-CAM showing where it looked.</p><em>National winner, NexGen Hackathon 2025. Top team of 6,000.</em></div></li>
+        <li><span class="catch">disease before symptoms</span><div><b>Project AEGIS</b><p>A walk-through chamber of thermal, millimetre-wave, ultrasound, low-dose X-ray, breath and gait sensors. I designed the hardware and sensor suite; Vikashini S built the software.</p><em>Finalist, L&amp;T TECHgium.</em></div></li>
+        <li><span class="catch">a gearbox about to resonate</span><div><b>Modal analysis, DRDO CVRDE</b><p>Natural frequencies and mode shapes in ANSYS, for an aircraft-mounted gearbox.</p></div></li>
+        <li><span class="catch">a cracked propeller</span><div><b><a href="https://github.com/vishal-79/NDT-using-Phyphox">Propeller NDT</a></b><p>A phone's accelerometer and microphone, read through FFT. No lab equipment needed.</p><em>Open source.</em></div></li>
+        <li><span class="catch">illness in a voice</span><div><b><a href="https://github.com/vishal-79/vocal-biomarkers">Timbre</a></b><p>88 voice biomarkers and a Random Forest, 92.5% accurate, with SHAP explanations. Three seconds of "ahhh".</p><em>Open source.</em></div></li>
+        <li><span class="catch">a dangerous route</span><div><b><a href="https://github.com/vishal-79/SafetyNav">SafetyNav</a></b><p>Crime-data heatmaps and route scoring.</p><em>GDG on Campus Solution Challenge 2025.</em></div></li>
+      </ol>
+    </section>
+
+    <section class="wrap grid rule sec top" id="path">
+      <div class="l copy stick" data-in>
+        <span class="eyebrow">Path</span>
+        <h2>From first-year projects to a live company, in four years.</h2>
+        <p>Before the company: modal analysis at DRDO, stress analysis on aircraft structures, and LiDAR–camera fusion for a funded drone project at IIT Tirupati.</p>
+      </div>
+      <ol class="r path list" data-in>
+        <li class="key now"><time>Now</time><span>HataD is live, taking orders across Tamil Nadu</span></li>
+        <li><time>Aug 2026</time><span>HataD featured at IIT Madras Shaastra</span></li>
+        <li><time>Mid-2026</time><span>Crest Intelligence joins AWS Activate</span></li>
+        <li><time>May 2026</time><span>Graduated, B.Tech Aerospace Engineering, Karunya</span></li>
+        <li><time>Late 2025</time><span>HataD joins NVIDIA Inception</span></li>
+        <li class="key"><time>Sep 2025</time><span>Co-founded Crest Intelligence; HataD begins</span></li>
+        <li class="key"><time>Sep 2025</time><span>National winner, NexGen Hackathon 2025</span></li>
+        <li><time>Mid-2025</time><span>Co-founded Hypse Aero: drone surveys into digital twins</span></li>
+        <li><time>Jun 2025</time><span>Modal analysis, DRDO CVRDE</span></li>
+        <li><time>Mid-2025</time><span>Funded drone project, IIT Tirupati</span></li>
+        <li><time>Dec 2024</time><span>Stress analysis, Bangalore Aircraft Industries</span></li>
+        <li><time>Aug 2022</time><span>Started B.Tech Aerospace Engineering, Karunya</span></li>
+      </ol>
+    </section>
+
+    <section class="wrap grid rule sec top contact" id="contact">
+      <div class="l copy" data-in>
+        <span class="eyebrow">Contact</span>
+        <h2>Let's talk.</h2>
+        <p>If you're buying or financing land in Tamil Nadu, building something hard, or backing someone who will.</p>
+      </div>
+      <ul class="r links list" data-in>
+        <li><a href="https://www.linkedin.com/in/vishalm79"><b>LinkedIn</b><span>in/vishalm79 <i>↗</i></span></a></li>
+        <li><a href="https://github.com/vishal-79"><b>GitHub</b><span>vishal-79 <i>↗</i></span></a></li>
+        <li><a href="https://hatad.in"><b>HataD</b><span>hatad.in <i>↗</i></span></a></li>
+        <li><a href="https://crestintelligence.in"><b>Crest Intelligence</b><span>crestintelligence.in <i>↗</i></span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><div class="wrap rule"><span>Coimbatore · 11.0168°N 76.9558°E · <span id="clock2">IST</span></span><span>Figures drawn with <a href="https://hairline.lucasmarkes.com" style="text-decoration:none;border-bottom:1px solid var(--line)">Hairline</a></span></div></footer>
+
+<script>document.documentElement.classList.add("js");</script>
+<script src="assets/hairline/kernel.js"></script>
+<script>
+(function () {
+  var root = document.documentElement;
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // What each figure's read-out says, in the corner of its stage.
+  var SAY = {
+    drone: function (t) { return t === "rest" ? "hovering" : t === "hold" ? "holding" : "flying " + t; },
+    laptop: function (t) { return t === "rest" ? "type on the keys" : "key " + t; },
+    proofs: function (t) { return t === "rest" ? "pick up a proof" : t; }
+  };
+  var injected = false;
+  // A small host for several Hairline figures: each mounts on the stage that names it.
+  window.hairline = function (figure) {
+    var stage = document.querySelector('[data-fig="' + figure.name + '"]'), inst = document.querySelector('[data-inst="' + figure.name + '"]');
+    if (!stage) return;
+    if (!injected) { HL.inject(document); injected = true; }
+    stage.setAttribute("data-hairline", figure.name);
+    stage.setAttribute("data-hairline-theme", "light");
+    stage.setAttribute("role", "img");
+    stage.setAttribute("aria-label", figure.means);
+    var svg = HL.mk("svg", { viewBox: "0 0 400 320", "aria-hidden": "true" }, stage);
+    var text = "rest", timer = 0;
+    var read = {
+      get textContent() { return text; },
+      set textContent(v) {
+        var next = String(v), was = text;
+        text = next;
+        if (!inst || next === was) return;
+        // a change of state fades the label through; a running number just updates
+        var calm = (was === "rest") !== (next === "rest");
+        var put = function () { inst.textContent = SAY[figure.name](next); inst.classList.toggle("live", next !== "rest"); inst.classList.remove("swap"); };
+        if (calm && !still) { clearTimeout(timer); inst.classList.add("swap"); timer = setTimeout(put, 140); } else put();
+      }
+    };
+    figure.mount({ stage: stage, svg: svg, read: read }, figure.range[1]);
+  };
+
+  // The hero arrives once the type is ready, so nothing jumps.
+  var go = function () { root.classList.add("ready"); };
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { requestAnimationFrame(go); }); else go();
+  setTimeout(go, 1200);
+
+  // Everything below settles in as it arrives: children in turn, the figures with a breath.
+  function count(el) {
+    var to = Number(el.dataset.count), tail = el.querySelector("small"), t0 = 0, D = 1100;
+    var fmt = function (n) { return Math.round(n).toLocaleString("en-IN"); };
+    if (still) return;
+    var step = function (now) {
+      if (!t0) t0 = now;
+      var p = Math.min(1, (now - t0) / D), e = 1 - Math.pow(1 - p, 3);
+      el.firstChild.nodeValue = fmt(to * e);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    el.firstChild.nodeValue = "0";
+    requestAnimationFrame(step);
+    if (tail) el.appendChild(tail);
+  }
+  var groups = Array.prototype.slice.call(document.querySelectorAll("[data-in], .figin"));
+  groups.forEach(function (g) { Array.prototype.forEach.call(g.children, function (c, n) { c.style.setProperty("--n", n); }); });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        e.target.querySelectorAll("[data-count]").forEach(count);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    groups.forEach(function (g) { io.observe(g); });
+  } else groups.forEach(function (g) { g.classList.add("in"); });
+
+  // The header takes a hairline once the page moves; the nav marks the section in view.
+  var head = document.getElementById("head");
+  var onScroll = function () { head.classList.toggle("scrolled", scrollY > 8); };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  if ("IntersectionObserver" in window) {
+    var links = {};
+    document.querySelectorAll("nav a[href^='#']").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { var a = links[e.target.id]; if (a) a.classList.toggle("on", e.isIntersecting); });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    document.querySelectorAll("section[id]").forEach(function (s) { spy.observe(s); });
+  }
+
+  function tick() {
+    try {
+      var t = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" }).format(new Date());
+      document.getElementById("clock").textContent = "Coimbatore " + t;
+      document.getElementById("clock2").textContent = t + " IST";
+    } catch (e) {}
+  }
+  tick(); setInterval(tick, 20000);
+})();
+</script>
+<script type="module" src="assets/hairline/drone.js"></script>
+<script type="module" src="assets/hairline/laptop.js"></script>
+<script type="module" src="assets/hairline/proofs.js"></script>
+</body>
+</html>
